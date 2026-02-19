@@ -76,15 +76,25 @@ def crear_avatar_pro(nombre, emocion):
     draw = ImageDraw.Draw(img)
 
     # brillo tipo Pixar
-    for i in range(200):
-        draw.ellipse(
-            (random.randint(0,500), random.randint(0,500),
-             random.randint(0,500), random.randint(0,500)),
-            outline=(255,255,255,30)
-        )
-
+    #for i in range(200):
+     #   draw.ellipse(
+      #      (random.randint(0,500), random.randint(0,500),
+       #      random.randint(0,500), random.randint(0,500)),
+        #    outline=(255,255,255,30)
+        #)
+    
     # cara
-    draw.ellipse((150, 120, 350, 320), fill=(255,255,255))
+    #draw.ellipse((150, 120, 350, 320), fill=(255,255,255))
+    for i in range(200):
+        x1 = random.randint(0, 450)
+        y1 = random.randint(0, 450)
+        x2 = x1 + random.randint(10, 50)
+        y2 = y1 + random.randint(10, 50)
+
+    draw.ellipse(
+        (x1, y1, x2, y2),
+        outline=(255,255,255)
+    )
 
     # ojos según emoción
     if emocion == "Alegría":
